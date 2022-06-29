@@ -1,0 +1,33 @@
+openapi: 3.0.3
+
+info:
+  title: Hello World
+  description: My API
+  version: "1.0"
+paths:
+  /hello/{name}:
+    get:
+      description: "Say Hello to somebody"
+      operationId: hello
+      parameters:
+        - name: name
+          in: path
+          description: The person's name
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: The greeting
+          content:
+            application/json:
+              schema:
+                $ref:  '#/components/schemas/Message'
+
+components:
+  schemas:
+    Message:
+      type: object
+      properties:
+        message:
+          type: string

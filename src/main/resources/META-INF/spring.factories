@@ -1,0 +1,3 @@
+io.spring.initializr.generator.project.ProjectGenerationConfiguration=\
+com.javaetmoi.initializr.generator.common.CommonSpringBootConfiguration,\
+com.javaetmoi.initializr.generator.openapi.OpenAPIConfiguration

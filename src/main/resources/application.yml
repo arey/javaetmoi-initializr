@@ -1,0 +1,58 @@
+server:
+  port: 9090
+
+initializr:
+  dependencies:
+    - name: Java&Moi
+      content:
+        - id: openapi
+          name: OpenAPI
+          starter: false
+          description: "Configure the web application to expose a REST API designed with a contact-first OpenAPI Specification (OAS): \n
+          - The openapi-generator-maven-plugin\n
+          - SwaggerUI with Springdoc"
+    - name: Spring
+      content:
+        - name: Web
+          id: web
+          description: Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+  boot-versions:
+    - id: 2.7.1
+      default: true
+  env:
+    maven:
+      parent:
+        groupId: org.springframework.boot
+        artifactId: spring-boot-starter-parent
+        version: 2.7.1
+  types:
+    - name: Maven Project
+      id: maven-project
+      description: Generate a Maven based project archive
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+    - name: War
+      id: war
+      default: false
+  javaVersions:
+    - id: 11
+      default: false
+    - id: 17
+      default: true
+  languages:
+    - name: Java
+      id: java
+      default: true
+  group-id:
+    value: com.javaetmoi.myapp
+  version:
+    value: 1.0.0-SNAPSHOT
+
+

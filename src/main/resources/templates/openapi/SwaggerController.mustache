@@ -1,0 +1,17 @@
+package {{package}};
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+* Home redirection to the Swagger API documentation
+*/
+@Controller
+public class SwaggerController {
+
+    @RequestMapping(value = "/")
+    public String index() {
+        return "redirect:swagger-ui/index.html";
+    }
+
+}

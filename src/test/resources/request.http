@@ -1,0 +1,9 @@
+### GET localhost:9090
+GET localhost:9090
+
+### GET https://start.spring.io
+GET https://start.spring.io/
+
+### Download Zip file
+GET http://localhost:8092/starter.zip?type=maven-project&bootVersion=2.7.1&groupId=com.javaetmoi.myapp&artifactId=myapp&name=myapp&version=1.0.0-SNAPSHOT&language=java&packageName=com.javaetmoi.myapp.demo&javaVersion=11&packaging=jar&description=myapp&dependencies=openapi
+
